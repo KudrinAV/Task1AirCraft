@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Aircraft.cs" />
+    <Compile Include="Classes\Plane\PassengerPlane.cs" />
+    <Compile Include="Classes\Plane\Plane.cs" />
+    <Compile Include="Classes\Plane\TransportPlane.cs" />
     <Compile Include="Interfaces\IAircraft.cs" />
     <Compile Include="Interfaces\IHelicopter.cs" />
     <Compile Include="Interfaces\IPassenger.cs" />
@@ -54,8 +58,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
