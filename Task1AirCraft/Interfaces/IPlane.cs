@@ -10,6 +10,6 @@ namespace Task1AirCraft.Interfaces
     {
         int NumberOfEngines { get; }
         int NumberOfPilots { get; }
-        int NumberOfWings { get; } 
+        int NumberOfWings { get; }
     }
 }

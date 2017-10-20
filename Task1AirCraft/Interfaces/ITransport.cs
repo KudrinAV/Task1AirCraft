@@ -9,6 +9,6 @@ namespace Task1AirCraft.Interfaces
     public interface ITransport
     {
         double Power { get; }
-        double FreigtCost { get; } 
+        double FreigtCost { get; }
     }
 }

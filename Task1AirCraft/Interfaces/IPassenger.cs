@@ -8,7 +8,7 @@ namespace Task1AirCraft.Interfaces
 {
     public interface IPassenger
     {
-        int NumberOfPlaces { get; } 
+        int NumberOfPlaces { get; }
         double CostOfPlace { get; }
     }
 }
