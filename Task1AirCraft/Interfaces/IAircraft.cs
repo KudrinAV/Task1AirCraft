@@ -11,6 +11,6 @@ namespace Task1AirCraft.Interfaces
         double CarryingCapacity { get; }
         double ConsumptionOfFire { get; }
         double Capacity { get; }
-        double RangeOfFlight { get; }
+        double RangeOfFlight { get; } 
     }
 }

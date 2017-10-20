@@ -8,6 +8,6 @@ namespace Task1AirCraft.Interfaces
 {
     public interface ITypeable
     {
-        string Type { get; }
+        string Type { get; } 
     }
 }

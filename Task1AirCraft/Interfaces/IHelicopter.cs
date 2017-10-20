@@ -9,6 +9,6 @@ namespace Task1AirCraft.Interfaces
     public interface IHelicopter : IAircraft
     {
         int MinimumHeightOfWork { get; }
-        int MaximumHeightOfWork { get; }
+        int MaximumHeightOfWork { get; } 
     }
 }
