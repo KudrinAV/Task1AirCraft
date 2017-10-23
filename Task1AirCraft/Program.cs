@@ -14,10 +14,10 @@ namespace Task1AirCraft
     {
         static void Main(string[] args)
         {
-            IAircraft plane1 = new Plane("Boing1", 3, 320.2, 240, 120, 3000);
-            IAircraft plane2 = new Plane("Boing2", 5, 380.2, 120, 150, 3500);
-            IAircraft plane3 = new Plane("Boing3", 4, 240.2, 60, 130, 2000);
-            IAircraft plane4 = new Plane("Boing4", 2, 720.2, 230, 140, 1500);
+            IAircraft plane1 = new Plane(type: "Boing1", numberOfEngines: 3, carryingCapacity: 320.2, consumptionOfFire: 240, capacity: 120, rangeOfFlight: 3000);
+            IAircraft plane2 = new Plane(type: "Boing2", numberOfEngines: 5, carryingCapacity: 380.2, consumptionOfFire: 120, capacity: 150, rangeOfFlight: 3500);
+            IAircraft plane3 = new Plane(type: "Boing3", numberOfEngines: 4, carryingCapacity: 240.2, consumptionOfFire: 60, capacity: 130, rangeOfFlight: 2000);
+            IAircraft plane4 = new Plane(type: "Boing4", numberOfEngines: 2, carryingCapacity: 720.2, consumptionOfFire: 230, capacity: 140, rangeOfFlight: 1500);
 
             Airport testAiport = new Airport();
             testAiport.Add(plane1);

@@ -74,7 +74,7 @@ namespace Task1AirCraft.Classes
         public ICollection<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
         {
             ICollection<IAircraft> foundAircaft = new List<IAircraft>();
-            var finding = _airport.Where(i => i.ConsumptionOfFire <= max && i.ConsumptionOfFire >= min).Select(i => i);
+            var finding = _airport.Where(i => i.ConsumptionOfFire <= max && i.ConsumptionOfFire >= min);
             foreach(IAircraft item in finding)
             {
                 foundAircaft.Add(item);
