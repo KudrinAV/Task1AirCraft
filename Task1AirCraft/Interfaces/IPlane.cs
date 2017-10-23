@@ -9,7 +9,5 @@ namespace Task1AirCraft.Interfaces
     public interface IPlane : IAircraft
     {
         int NumberOfEngines { get; }
-        int NumberOfPilots { get; }
-        int NumberOfWings { get; }
     }
 }
