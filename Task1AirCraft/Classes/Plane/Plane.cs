@@ -11,10 +11,6 @@ namespace Task1AirCraft.Classes.Plane
     {
         public int NumberOfEngines { get; protected set; }
 
-        public int NumberOfPilots { get; protected set; }
-
-        public int NumberOfWings { get; protected set; }
-
         public double CarryingCapacity { get; protected set; }
 
         public double ConsumptionOfFire { get; protected set; }
@@ -23,11 +19,9 @@ namespace Task1AirCraft.Classes.Plane
 
         public double RangeOfFlight { get; protected set; }
 
-        public Plane(string type, int numberOfEngines, int numberOfPilots, int numberOfWings, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight) : base(type)
+        public Plane(string type, int numberOfEngines, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight) : base(type)
         {
             NumberOfEngines = numberOfEngines;
-            NumberOfPilots = numberOfPilots;
-            NumberOfWings = numberOfWings;
             CarryingCapacity = carryingCapacity;
             ConsumptionOfFire = consumptionOfFire;
             Capacity = capacity;
