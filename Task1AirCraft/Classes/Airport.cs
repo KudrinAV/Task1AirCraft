@@ -74,14 +74,34 @@ namespace Task1AirCraft.Classes
         public ICollection<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
         {
             ICollection<IAircraft> foundAircaft = new List<IAircraft>();
+            //var 
             foreach(IAircraft item in _airport)
             {
                 if((item.ConsumptionOfFire.CompareTo(min) == 1 && item.ConsumptionOfFire.CompareTo(max) == -1) || item.ConsumptionOfFire.CompareTo(min)==0 || item.ConsumptionOfFire.CompareTo(max)==0)
+
                 {
                     foundAircaft.Add(item);
                 }
             }
             return foundAircaft;
+        }
+
+        public void SortByFlyingRangeAsc()
+        {
+            var sorting = _airport.OrderBy(i => i.RangeOfFlight);
+            foreach(IAircraft item in sorting)
+            {
+                Console.WriteLine(item.Type);
+            }
+        }
+
+        public void SortByFlyingRangeDes()
+        {
+            var sorting = _airport.OrderByDescending(i => i.RangeOfFlight);
+            foreach (IAircraft item in sorting)
+            {
+                Console.WriteLine(item.Type);
+            }
         }
     }
 }

@@ -27,10 +27,12 @@ namespace Task1AirCraft
 
             Console.WriteLine(testAiport.GetTotatlCapacity());
             Console.WriteLine(testAiport.GetTotalCarryingCapacity());
-            foreach(var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))
+            foreach(var item in testAiport.FindAircraftByConsumptionOfFire(230, 230))
             {
                 Console.WriteLine(item.Type);
             }
+            testAiport.SortByFlyingRangeDes();
+            testAiport.SortByFlyingRangeAsc();
         }
     }
 }
