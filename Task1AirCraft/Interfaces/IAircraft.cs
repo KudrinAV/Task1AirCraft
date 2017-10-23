@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1AirCraft.Interfaces
 {
-    public interface IAircraft
+    public interface IAircraft : ITypeable
     {
         double CarryingCapacity { get; }
         double ConsumptionOfFire { get; }

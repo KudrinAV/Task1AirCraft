@@ -11,12 +11,9 @@ namespace Task1AirCraft.Classes.Helicopter
     {
         public int NumberOfPlaces { get; private set; }
 
-        public double CostOfPlace { get; private set; }
-
-        public PassengerHelicopter(string type, int minimumHeightOfWork, int maximumHeightOfWork, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight, int numberOfPlaces, double costOfPlaces) : base(type, minimumHeightOfWork, maximumHeightOfWork, carryingCapacity, consumptionOfFire, capacity, rangeOfFlight)
+        public PassengerHelicopter(string type, int minimumHeightOfWork, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight, int numberOfPlaces) : base(type, minimumHeightOfWork, carryingCapacity, consumptionOfFire, capacity, rangeOfFlight)
         {
             NumberOfPlaces = numberOfPlaces;
-            CostOfPlace = costOfPlaces;
         }
     }
 }
