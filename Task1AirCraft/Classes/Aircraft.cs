@@ -7,13 +7,27 @@ using Task1AirCraft.Interfaces;
 
 namespace Task1AirCraft.Classes
 {
-    public class Aircraft : ITypeable
+    public class Aircraft : ITypeable, IAircraft 
     {
-        public string Type { get; }
+        public string TypeOfPlane { get; private set; }
 
-        public Aircraft(string type)
+        public string NameOfPlane { get; private set; }
+
+        public double ConsumptionOfFuel { get; private set; }
+
+        public AircraftProperties aircraftProperties { get; private set; }
+
+        public Aircraft(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_)
         {
-            Type = type;
+            TypeOfPlane = typeOfPlane;
+            NameOfPlane = nameOfPlane;
+            aircraftProperties = aircraftProperties_;
+            ConsumptionOfFuel = GetConsumptionOfFuel(aircraftProperties_.RangeOfFlight, aircraftProperties_.CarryingCapacity);
+        }
+
+        public double GetConsumptionOfFuel(double RangeOfFlight, double CarryingCapacity )
+        {
+            return RangeOfFlight * CarryingCapacity;
         }
     }
 }
