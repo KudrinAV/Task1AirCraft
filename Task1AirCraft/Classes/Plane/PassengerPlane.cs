@@ -11,7 +11,7 @@ namespace Task1AirCraft.Classes.Plane
     {
         public int NumberOfPlaces { get; private set; }
 
-        public PassengerPlane(string type, int numberOfEngines, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight, int numberOfPlaces) : base(type, numberOfEngines, carryingCapacity, consumptionOfFire, capacity, rangeOfFlight)
+        public PassengerPlane(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, PlaneProperties planeProperties_, int numberOfPlaces ) : base(typeOfPlane, nameOfPlane, aircraftProperties_, planeProperties_)
         {
             NumberOfPlaces = numberOfPlaces;
         }

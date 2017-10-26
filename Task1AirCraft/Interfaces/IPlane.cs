@@ -7,8 +7,8 @@ using Task1AirCraft.Classes.Plane;
 
 namespace Task1AirCraft.Interfaces
 {
-    public interface IPlane 
+    public interface IPlane : IAircraft
     {
-        PlaneProperties planeProperties { get; set; }
+        PlaneProperties planeProperties { get; }
     }
 }

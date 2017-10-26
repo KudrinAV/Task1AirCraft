@@ -51,53 +51,53 @@ namespace Task1AirCraft.Classes
             return _airport.GetEnumerator();
         }
 
-        public double GetTotatlCapacity()
-        {
-            double totalCapacity = 0.0;
-            foreach(IAircraft item in _airport)
-            {
-                totalCapacity += item.Capacity;
-            }
-            return totalCapacity;
-        }
+        //public double GetTotatlCapacity()
+        //{
+        //    double totalCapacity = 0.0;
+        //    foreach(IAircraft item in _airport)
+        //    {
+        //        totalCapacity += item.Capacity;
+        //    }
+        //    return totalCapacity;
+        //}
 
-        public double GetTotalCarryingCapacity()
-        {
-            double totalCarryingCapacity = 0.0;
-            foreach(IAircraft item in _airport)
-            {
-                totalCarryingCapacity += item.CarryingCapacity;
-            }
-            return totalCarryingCapacity;
-        }
+        //public double GetTotalCarryingCapacity()
+        //{
+        //    double totalCarryingCapacity = 0.0;
+        //    foreach(IAircraft item in _airport)
+        //    {
+        //        totalCarryingCapacity += item.CarryingCapacity;
+        //    }
+        //    return totalCarryingCapacity;
+        //}
 
-        public ICollection<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
-        {
-            ICollection<IAircraft> foundAircaft = new List<IAircraft>();
-            var finding = _airport.Where(i => i.ConsumptionOfFire <= max && i.ConsumptionOfFire >= min);
-            foreach(IAircraft item in finding)
-            {
-                foundAircaft.Add(item);
-            }
-            return foundAircaft;
-        }
+        //public ICollection<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
+        //{
+        //    ICollection<IAircraft> foundAircaft = new List<IAircraft>();
+        //    var finding = _airport.Where(i => i.ConsumptionOfFire <= max && i.ConsumptionOfFire >= min);
+        //    foreach(IAircraft item in finding)
+        //    {
+        //        foundAircaft.Add(item);
+        //    }
+        //    return foundAircaft;
+        //}
 
-        public void SortByFlyingRangeAsc()
-        {
-            var sorting = _airport.OrderBy(i => i.RangeOfFlight);
-            foreach(IAircraft item in sorting)
-            {
-                Console.WriteLine(item.Type);
-            }
-        }
+        //public void SortByFlyingRangeAsc()
+        //{
+        //    var sorting = _airport.OrderBy(i => i.RangeOfFlight);
+        //    foreach(IAircraft item in sorting)
+        //    {
+        //        Console.WriteLine(item.Type);
+        //    }
+        //}
 
-        public void SortByFlyingRangeDes()
-        {
-            var sorting = _airport.OrderByDescending(i => i.RangeOfFlight);
-            foreach (IAircraft item in sorting)
-            {
-                Console.WriteLine(item.Type);
-            }
-        }
+        //public void SortByFlyingRangeDes()
+        //{
+        //    var sorting = _airport.OrderByDescending(i => i.RangeOfFlight);
+        //    foreach (IAircraft item in sorting)
+        //    {
+        //        Console.WriteLine(item.Type);
+        //    }
+        //}
     }
 }
