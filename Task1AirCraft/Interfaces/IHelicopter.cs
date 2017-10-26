@@ -7,7 +7,7 @@ using Task1AirCraft.Classes.Helicopter;
 
 namespace Task1AirCraft.Interfaces
 {
-    public interface IHelicopter : IAircraft
+    public interface IHelicopter
     {
         HelicopterProperties helicopterProperties { get; }
     }

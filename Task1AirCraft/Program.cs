@@ -51,11 +51,18 @@ namespace Task1AirCraft
 
             Airport airport = new Airport(myAirport);
 
-            foreach(IAircraft item in airport.FindAircraftByConsumptionOfFire(100, 30000000))
+            foreach(IAircraft item in airport.FindAircraftByConsumptionOfFuel(100, 30000000))
             {
                 Console.WriteLine(item.NameOfPlane + " " + item.aircraftProperties.RangeOfFlight + " " + item.aircraftProperties.CarryingCapacity + " "+ item.ConsumptionOfFuel);
             }
-            
+
+            double TotalCaryringCapacity = 0.0;
+            foreach(var item in airport.GetTotalCarryingCapacity())
+            {
+                TotalCaryringCapacity += item;
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(TotalCaryringCapacity);
             //Console.WriteLine(testAiport.GetTotatlCapacity());
             //Console.WriteLine(testAiport.GetTotalCarryingCapacity());
             //foreach (var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))

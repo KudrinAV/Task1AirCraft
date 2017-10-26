@@ -66,38 +66,28 @@ namespace Task1AirCraft.Classes
         //    return totalCapacity;
         //}
 
-        //public double GetTotalCarryingCapacity()
-        //{
-        //    double totalCarryingCapacity = 0.0;
-        //    foreach(IAircraft item in _airport)
-        //    {
-        //        totalCarryingCapacity += item.CarryingCapacity;
-        //    }
-        //    return totalCarryingCapacity;
-        //}
-
-        public IEnumerable<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
+        public IEnumerable<double> GetTotalCarryingCapacity()
         {
-            IEnumerable<IAircraft> finding = null;
-            return finding = _airport.Where(i => i.ConsumptionOfFuel <= max && i.ConsumptionOfFuel >= min);
+            IEnumerable<double> finding = _airport.Select(i => i.aircraftProperties.CarryingCapacity);
+            return finding;
         }
 
-        //public void SortByFlyingRangeAsc()
-        //{
-        //    var sorting = _airport.OrderBy(i => i.RangeOfFlight);
-        //    foreach(IAircraft item in sorting)
-        //    {
-        //        Console.WriteLine(item.Type);
-        //    }
-        //}
+        public IEnumerable<IAircraft> FindAircraftByConsumptionOfFuel(double min, double max)
+        {
+            var finding = _airport.Where(i => i.ConsumptionOfFuel <= max && i.ConsumptionOfFuel >= min);
+            return finding;
+        }
 
-        //public void SortByFlyingRangeDes()
-        //{
-        //    var sorting = _airport.OrderByDescending(i => i.RangeOfFlight);
-        //    foreach (IAircraft item in sorting)
-        //    {
-        //        Console.WriteLine(item.Type);
-        //    }
-        //}
+        public IEnumerable<IAircraft> SortByFlyingRangeAsc()
+        {
+            var sorting = _airport.OrderBy(i => i.aircraftProperties.RangeOfFlight);
+            return sorting;
+        }
+
+        public IEnumerable<IAircraft> SortByFlyingRangeDes()
+        {
+            var sorting = _airport.OrderByDescending(i => i.aircraftProperties.RangeOfFlight);
+            return sorting;
+        }
     }
 }
