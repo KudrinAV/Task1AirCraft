@@ -56,19 +56,15 @@ namespace Task1AirCraft.Classes
             return _airport.GetEnumerator();
         }
 
-        //public double GetTotatlCapacity()
-        //{
-        //    double totalCapacity = 0.0;
-        //    foreach(IAircraft item in _airport)
-        //    {
-        //        totalCapacity += item.Capacity;
-        //    }
-        //    return totalCapacity;
-        //}
+        public IEnumerable<double> GetTotatlCapacity()
+        {
+            var finding = _airport.Select(i => i.aircraftProperties.Capacity);
+            return finding;
+        }
 
         public IEnumerable<double> GetTotalCarryingCapacity()
         {
-            IEnumerable<double> finding = _airport.Select(i => i.aircraftProperties.CarryingCapacity);
+            var finding = _airport.Select(i => i.aircraftProperties.CarryingCapacity);
             return finding;
         }
 

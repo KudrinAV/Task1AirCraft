@@ -60,9 +60,17 @@ namespace Task1AirCraft
             foreach(var item in airport.GetTotalCarryingCapacity())
             {
                 TotalCaryringCapacity += item;
-                Console.WriteLine(item);
             }
             Console.WriteLine(TotalCaryringCapacity);
+
+            double TotalCapacity = 0.0;
+            foreach(var item in airport.GetTotatlCapacity())
+            {
+                TotalCapacity += item;
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine(TotalCapacity);
             //Console.WriteLine(testAiport.GetTotatlCapacity());
             //Console.WriteLine(testAiport.GetTotalCarryingCapacity());
             //foreach (var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))
