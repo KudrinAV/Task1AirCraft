@@ -8,6 +8,7 @@ namespace Task1AirCraft.Interfaces
 {
     public interface ITypeable
     {
-        string Type { get; } 
+        string TypeOfPlane { get; } 
+        string NameOfPlane { get; }
     }
 }
