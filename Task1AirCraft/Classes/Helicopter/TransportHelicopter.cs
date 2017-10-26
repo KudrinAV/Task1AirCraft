@@ -11,10 +11,9 @@ namespace Task1AirCraft.Classes.Helicopter
     {
         public double Power { get; private set; }
 
-        public TransportHelicopter(string type, int minimumHeightOfWork, double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight, double power) : base(type, minimumHeightOfWork, carryingCapacity, consumptionOfFire, capacity, rangeOfFlight)
+        public TransportHelicopter(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, HelicopterProperties helicopterProperties_, double power) : base(typeOfPlane, nameOfPlane, aircraftProperties_, helicopterProperties_)
         {
             Power = power;
         }
-
     }
 }

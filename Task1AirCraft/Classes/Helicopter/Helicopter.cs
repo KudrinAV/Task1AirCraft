@@ -9,23 +9,11 @@ namespace Task1AirCraft.Classes.Helicopter
 {
     class Helicopter : Aircraft, IHelicopter
     {
-        public int MinimumHeightOfWork { get; protected set; }
+        public HelicopterProperties helicopterProperties { get; private set; }
 
-        public double CarryingCapacity { get; protected set; }
-
-        public double ConsumptionOfFire { get; protected set; }
-
-        public double Capacity { get; protected set; }
-
-        public double RangeOfFlight { get; protected set; }
-
-        public Helicopter(string type, int minimumHeightOfWork,double carryingCapacity, double consumptionOfFire, double capacity, double rangeOfFlight) : base(type)
+        public Helicopter(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, HelicopterProperties helicopterProperties_) : base(typeOfPlane, nameOfPlane, aircraftProperties_)
         {
-            MinimumHeightOfWork = minimumHeightOfWork;
-            CarryingCapacity = carryingCapacity;
-            ConsumptionOfFire = consumptionOfFire;
-            Capacity = capacity;
-            RangeOfFlight = rangeOfFlight;
+            helicopterProperties = helicopterProperties_;
         }
     }
 }
