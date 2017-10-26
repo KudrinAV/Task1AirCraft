@@ -15,13 +15,13 @@ namespace Task1AirCraft.Classes
 
         public double ConsumptionOfFuel { get; private set; }
 
-        public AircraftProperties aircraftProperties { get; private set; }
+        public AircraftProperties AircraftProperties_ { get; private set; }
 
         public Aircraft(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_)
         {
             TypeOfPlane = typeOfPlane;
             NameOfPlane = nameOfPlane;
-            aircraftProperties = aircraftProperties_;
+            AircraftProperties_ = aircraftProperties_;
             ConsumptionOfFuel = GetConsumptionOfFuel(aircraftProperties_.RangeOfFlight, aircraftProperties_.CarryingCapacity);
         }
 

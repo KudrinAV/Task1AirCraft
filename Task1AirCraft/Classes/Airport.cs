@@ -58,13 +58,13 @@ namespace Task1AirCraft.Classes
 
         public IEnumerable<double> GetTotatlCapacity()
         {
-            var finding = _airport.Select(i => i.aircraftProperties.Capacity);
+            var finding = _airport.Select(i => i.AircraftProperties_.Capacity);
             return finding;
         }
 
         public IEnumerable<double> GetTotalCarryingCapacity()
         {
-            var finding = _airport.Select(i => i.aircraftProperties.CarryingCapacity);
+            var finding = _airport.Select(i => i.AircraftProperties_.CarryingCapacity);
             return finding;
         }
 
@@ -76,13 +76,13 @@ namespace Task1AirCraft.Classes
 
         public IEnumerable<IAircraft> SortByFlyingRangeAsc()
         {
-            var sorting = _airport.OrderBy(i => i.aircraftProperties.RangeOfFlight);
+            var sorting = _airport.OrderBy(i => i.AircraftProperties_.RangeOfFlight);
             return sorting;
         }
 
         public IEnumerable<IAircraft> SortByFlyingRangeDes()
         {
-            var sorting = _airport.OrderByDescending(i => i.aircraftProperties.RangeOfFlight);
+            var sorting = _airport.OrderByDescending(i => i.AircraftProperties_.RangeOfFlight);
             return sorting;
         }
     }

@@ -9,11 +9,11 @@ namespace Task1AirCraft.Classes.Plane
 {
     class Plane : Aircraft, IPlane
     {
-        public PlaneProperties planeProperties { get; private set; }
+        public PlaneProperties PlaneProperties_ { get; private set; }
 
         public Plane(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, PlaneProperties planeProperties_) : base(typeOfPlane, nameOfPlane, aircraftProperties_)
         {
-            planeProperties = planeProperties_;
+            PlaneProperties_ = planeProperties_;
         }
     }
 }

@@ -9,11 +9,11 @@ namespace Task1AirCraft.Classes.Helicopter
 {
     class Helicopter : Aircraft, IHelicopter
     {
-        public HelicopterProperties helicopterProperties { get; private set; }
+        public HelicopterProperties HelicopterProperties_ { get; private set; }
 
         public Helicopter(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, HelicopterProperties helicopterProperties_) : base(typeOfPlane, nameOfPlane, aircraftProperties_)
         {
-            helicopterProperties = helicopterProperties_;
+            HelicopterProperties_ = helicopterProperties_;
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Task1AirCraft
 
             foreach(IAircraft item in airport.FindAircraftByConsumptionOfFuel(100, 30000000))
             {
-                Console.WriteLine(item.NameOfPlane + " " + item.aircraftProperties.RangeOfFlight + " " + item.aircraftProperties.CarryingCapacity + " "+ item.ConsumptionOfFuel);
+                Console.WriteLine(item.NameOfPlane + " " + item.AircraftProperties_.RangeOfFlight + " " + item.AircraftProperties_.CarryingCapacity + " "+ item.ConsumptionOfFuel);
             }
 
             double TotalCaryringCapacity = 0.0;
