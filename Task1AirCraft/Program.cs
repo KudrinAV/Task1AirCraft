@@ -14,20 +14,51 @@ namespace Task1AirCraft
     {
         static void Main(string[] args)
         {
-            //IAircraft plane1 = new Plane(type: "Boing1", numberOfEngines: 3, carryingCapacity: 320.2, consumptionOfFire: 240, capacity: 120, rangeOfFlight: 3000);
-            //IAircraft plane2 = new Plane(type: "Boing2", numberOfEngines: 5, carryingCapacity: 380.2, consumptionOfFire: 120, capacity: 150, rangeOfFlight: 3500);
-            //IAircraft plane3 = new Plane(type: "Boing3", numberOfEngines: 4, carryingCapacity: 240.2, consumptionOfFire: 60, capacity: 130, rangeOfFlight: 2000);
-            //IAircraft plane4 = new Plane(type: "Boing4", numberOfEngines: 2, carryingCapacity: 720.2, consumptionOfFire: 230, capacity: 140, rangeOfFlight: 1500);
+            AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
+            PlaneProperties planeProperties1 = new PlaneProperties(typeOfEngine: "поршневые", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 500);
 
-            //Airport testAiport = new Airport();
-            //testAiport.Add(plane1);
-            //testAiport.Add(plane2);
-            //testAiport.Add(plane3);
-            //testAiport.Add(plane4);
+            AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 300, carryingCapacity: 400, rangeOfFlight: 4900);
+            PlaneProperties planeProperties2 = new PlaneProperties(typeOfEngine: "трубовиновые", numberOfEngines: 4, numberOfPilots: 2, numberOfWings: 2, accelerationLine: 550);
 
+            AircraftProperties aircraftProperties3 = new AircraftProperties(capacity: 190, carryingCapacity: 300, rangeOfFlight: 2200);
+            PlaneProperties planeProperties3 = new PlaneProperties(typeOfEngine: "турбореактивные", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 1000);
+
+            AircraftProperties aircraftProperties4 = new AircraftProperties(capacity: 40, carryingCapacity: 250, rangeOfFlight: 1500);
+            PlaneProperties planeProperties4 = new PlaneProperties(typeOfEngine: "с ракетными двигателями", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 4, accelerationLine: 540);
+
+            AircraftProperties aircraftProperties5 = new AircraftProperties(capacity: 600, carryingCapacity: 310, rangeOfFlight: 5000);
+            PlaneProperties planeProperties5 = new PlaneProperties(typeOfEngine: "КСУ", numberOfEngines: 5, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 390);
+
+            AircraftProperties aircraftProperties6 = new AircraftProperties(capacity: 300, carryingCapacity: 520, rangeOfFlight: 5300);
+            PlaneProperties planeProperties6 = new PlaneProperties(typeOfEngine: "электрический", numberOfEngines: 1, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 480);
+
+
+            List<IAircraft> myAirport = new List<IAircraft>();
+            Aircraft plane1 = new Plane("boing1", "Alice", aircraftProperties1, planeProperties1);
+            Aircraft plane2 = new Plane("boing2", "Orianna", aircraftProperties2, planeProperties2);
+            Aircraft plane3 = new Plane("boing3", "2B", aircraftProperties3, planeProperties3);
+            Aircraft plane4 = new Plane("boing4", "9S", aircraftProperties4, planeProperties4);
+            Aircraft plane5 = new Plane("boing5", "A2", aircraftProperties5, planeProperties5);
+            Aircraft plane6 = new Plane("boing6", "NIER", aircraftProperties6, planeProperties6);
+
+            myAirport.Add(plane1);
+            myAirport.Add(plane2);
+            myAirport.Add(plane3);
+            myAirport.Add(plane4);
+            myAirport.Add(plane5);
+            myAirport.Add(plane6);
+
+
+            Airport airport = new Airport(myAirport);
+
+            foreach(IAircraft item in airport.FindAircraftByConsumptionOfFire(100, 30000000))
+            {
+                Console.WriteLine(item.NameOfPlane + " " + item.aircraftProperties.RangeOfFlight + " " + item.aircraftProperties.CarryingCapacity + " "+ item.ConsumptionOfFuel);
+            }
+            
             //Console.WriteLine(testAiport.GetTotatlCapacity());
             //Console.WriteLine(testAiport.GetTotalCarryingCapacity());
-            //foreach(var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))
+            //foreach (var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))
             //{
             //    Console.WriteLine(item.Type);
             //}

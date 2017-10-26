@@ -10,7 +10,12 @@ namespace Task1AirCraft.Classes
 {
     public class Airport : ICollection<IAircraft>
     {
-        private ICollection<IAircraft> _airport = new List<IAircraft>();
+        private ICollection<IAircraft> _airport;
+
+        public Airport(ICollection<IAircraft> airport)
+        {
+            _airport = airport;
+        }
 
         public int Count { get { return _airport.Count; } }
 
@@ -71,16 +76,11 @@ namespace Task1AirCraft.Classes
         //    return totalCarryingCapacity;
         //}
 
-        //public ICollection<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
-        //{
-        //    ICollection<IAircraft> foundAircaft = new List<IAircraft>();
-        //    var finding = _airport.Where(i => i.ConsumptionOfFire <= max && i.ConsumptionOfFire >= min);
-        //    foreach(IAircraft item in finding)
-        //    {
-        //        foundAircaft.Add(item);
-        //    }
-        //    return foundAircaft;
-        //}
+        public IEnumerable<IAircraft> FindAircraftByConsumptionOfFire(double min, double max)
+        {
+            IEnumerable<IAircraft> finding = null;
+            return finding = _airport.Where(i => i.ConsumptionOfFuel <= max && i.ConsumptionOfFuel >= min);
+        }
 
         //public void SortByFlyingRangeAsc()
         //{
