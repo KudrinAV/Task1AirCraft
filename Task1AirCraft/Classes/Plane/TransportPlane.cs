@@ -15,5 +15,10 @@ namespace Task1AirCraft.Classes.Plane
         {
             Power = power;
         }
+
+        public override double GetConsumptionOfFuel()
+        {
+            return PlaneProperties_.NumberOfEngines * AircraftProperties_.RangeOfFlight * AircraftProperties_.CarryingCapacity * 0.007 * Power;
+        }
     }
 }
