@@ -12,11 +12,11 @@ namespace Task1AirCraft.Classes.Helicopter
         public int MaximumHeightOfwork;
         public int NumberOfScrews;
 
-        public HelicopterProperties(int maximumHeightOfWork, int minimumHeightOfWork, int nymberOfScrews)
+        public HelicopterProperties(int maximumHeightOfWork, int minimumHeightOfWork, int numberOfScrews)
         {
             MinimumHeightOfWork = minimumHeightOfWork;
             MaximumHeightOfwork = maximumHeightOfWork;
-            NumberOfScrews = nymberOfScrews;
+            NumberOfScrews = numberOfScrews;
         }
 
     }
