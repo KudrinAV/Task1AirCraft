@@ -67,10 +67,15 @@ namespace Task1AirCraft.Classes
             return TotalCapacity;
         }
 
-        public IEnumerable<double> GetTotalCarryingCapacity()
+        public double GetTotalCarryingCapacity()
         {
+            double TotalCarryingCapacity = 0.0;
             var finding = _airport.Select(i => i.AircraftProperties_.CarryingCapacity);
-            return finding;
+            foreach (var item in finding)
+            {
+                TotalCarryingCapacity += item;
+            }
+            return TotalCarryingCapacity;
         }
 
         public IEnumerable<IAircraft> GetFindAircraftByConsumptionOfFuel(double min, double max)
