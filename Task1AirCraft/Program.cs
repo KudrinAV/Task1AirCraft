@@ -39,7 +39,16 @@ namespace Task1AirCraft
             Aircraft plane3 = new Plane("boing3", "2B", aircraftProperties3, planeProperties3);
             Aircraft plane4 = new Plane("boing4", "9S", aircraftProperties4, planeProperties4);
             Aircraft plane5 = new Plane("boing5", "A2", aircraftProperties5, planeProperties5);
-            Aircraft plane6 = new Plane("boing6", "NIER", aircraftProperties6, planeProperties6);
+            Plane plane6 = new Plane("boing6", "NIER", aircraftProperties6, planeProperties6);
+
+            List<IAircraft> myAirport2 = new List<IAircraft>();
+
+            plane1.SetConsumptionOfFuel();
+            plane2.SetConsumptionOfFuel();
+            plane3.SetConsumptionOfFuel();
+            plane4.SetConsumptionOfFuel();
+            plane5.SetConsumptionOfFuel();
+            plane6.SetConsumptionOfFuel();
 
             myAirport.Add(plane1);
             myAirport.Add(plane2);
@@ -48,29 +57,34 @@ namespace Task1AirCraft
             myAirport.Add(plane5);
             myAirport.Add(plane6);
 
-
             Airport airport = new Airport(myAirport);
+            Airport airport2 = new Airport(myAirport2);
 
-            foreach(IAircraft item in airport.FindAircraftByConsumptionOfFuel(100, 30000000))
+            foreach (IAircraft item in airport)
             {
-                Console.WriteLine(item.NameOfPlane + " " + item.AircraftProperties_.RangeOfFlight + " " + item.AircraftProperties_.CarryingCapacity + " "+ item.ConsumptionOfFuel);
+                Console.WriteLine(item.ConsumptionOfFuel + " " + item.NameOfPlane);
             }
 
-            double TotalCaryringCapacity = 0.0;
-            foreach(var item in airport.GetTotalCarryingCapacity())
-            {
-                TotalCaryringCapacity += item;
-            }
-            Console.WriteLine(TotalCaryringCapacity);
+            //foreach (IAircraft item in airport.FindAircraftByConsumptionOfFuel(100, 30000000))
+            //{
+            //    Console.WriteLine(item.NameOfPlane + " " + item.AircraftProperties_.RangeOfFlight + " " + item.AircraftProperties_.CarryingCapacity + " " + item.GetConsumptionOfFuel());
+            //}
 
-            double TotalCapacity = 0.0;
-            foreach(var item in airport.GetTotatlCapacity())
-            {
-                TotalCapacity += item;
-                Console.WriteLine(item);
-            }
+            //double TotalCaryringCapacity = 0.0;
+            //foreach(var item in airport.GetTotalCarryingCapacity())
+            //{
+            //    TotalCaryringCapacity += item;
+            //}
+            //Console.WriteLine(TotalCaryringCapacity);
 
-            Console.WriteLine(TotalCapacity);
+            //double TotalCapacity = 0.0;
+            //foreach(var item in airport.GetTotatlCapacity())
+            //{
+            //    TotalCapacity += item;
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine(TotalCapacity);
             //Console.WriteLine(testAiport.GetTotatlCapacity());
             //Console.WriteLine(testAiport.GetTotalCarryingCapacity());
             //foreach (var item in testAiport.FindAircraftByConsumptionOfFire(60, 230))
