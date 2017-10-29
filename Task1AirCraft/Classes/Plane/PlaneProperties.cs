@@ -8,11 +8,11 @@ namespace Task1AirCraft.Classes.Plane
 {
     public struct PlaneProperties
     {
-        string TypeOfEngine;
-        int NumberOfEngines;
-        int NumberOfPilots;
-        int NumberOfWings;
-        int AccelerationLine;
+        public string TypeOfEngine;
+        public int NumberOfEngines;
+        public int NumberOfPilots;
+        public int NumberOfWings;
+        public int AccelerationLine;
 
         public PlaneProperties(string typeOfEngine, int numberOfEngines, int numberOfPilots, int numberOfWings, int accelerationLine)
         {
