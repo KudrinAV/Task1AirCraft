@@ -83,7 +83,7 @@ namespace Task1AirCraft.Classes
             return sorting;
         }
 
-        public IEnumerable<IAircraft> SortByFlyingRangeDes()
+        public IEnumerable<IAircraft> GetSortByFlyingRangeDes()
         {
             var sorting = _airport.OrderByDescending(i => i.AircraftProperties_.RangeOfFlight);
             return sorting;
