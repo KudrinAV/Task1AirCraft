@@ -13,8 +13,6 @@ namespace Task1AirCraft.Classes
 
         public string NameOfPlane { get; private set; }
 
-        public double ConsumptionOfFuel { get; protected set; }
-
         public AircraftProperties AircraftProperties_ { get; private set; }
 
         public Aircraft(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_)
