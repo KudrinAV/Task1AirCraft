@@ -14,14 +14,16 @@ namespace Task1AirCraft
     {
         static void Main(string[] args)
         {
-            AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
-            PlaneProperties planeProperties1 = new PlaneProperties(typeOfEngine: "поршневые", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 500);
+            AircraftProperties aircraftProperties0 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
 
-            AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 300, carryingCapacity: 400, rangeOfFlight: 4900);
-            PlaneProperties planeProperties2 = new PlaneProperties(typeOfEngine: "трубовиновые", numberOfEngines: 4, numberOfPilots: 2, numberOfWings: 2, accelerationLine: 550);
+            AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
+            PlaneProperties planeProperties1 = new PlaneProperties(typeOfEngine: "поршневые", numberOfEngines: 2, numberOfPilots: 2, numberOfWings: 2, accelerationLine: 500);
 
-            AircraftProperties aircraftProperties3 = new AircraftProperties(capacity: 190, carryingCapacity: 300, rangeOfFlight: 2200);
-            PlaneProperties planeProperties3 = new PlaneProperties(typeOfEngine: "турбореактивные", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 3, accelerationLine: 1000);
+            AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
+            PlaneProperties planeProperties2 = new PlaneProperties(typeOfEngine: "трубовиновые", numberOfEngines: 2, numberOfPilots: 2, numberOfWings: 2, accelerationLine: 500);
+
+            AircraftProperties aircraftProperties3 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
+            PlaneProperties planeProperties3 = new PlaneProperties(typeOfEngine: "турбореактивные", numberOfEngines: 2, numberOfPilots: 2, numberOfWings: 2, accelerationLine: 500);
 
             AircraftProperties aircraftProperties4 = new AircraftProperties(capacity: 40, carryingCapacity: 250, rangeOfFlight: 1500);
             PlaneProperties planeProperties4 = new PlaneProperties(typeOfEngine: "с ракетными двигателями", numberOfEngines: 3, numberOfPilots: 2, numberOfWings: 4, accelerationLine: 540);
@@ -43,13 +45,6 @@ namespace Task1AirCraft
 
             List<IAircraft> myAirport2 = new List<IAircraft>();
 
-            plane1.SetConsumptionOfFuel();
-            plane2.SetConsumptionOfFuel();
-            plane3.SetConsumptionOfFuel();
-            plane4.SetConsumptionOfFuel();
-            plane5.SetConsumptionOfFuel();
-            plane6.SetConsumptionOfFuel();
-
             myAirport.Add(plane1);
             myAirport.Add(plane2);
             myAirport.Add(plane3);
@@ -58,12 +53,6 @@ namespace Task1AirCraft
             myAirport.Add(plane6);
 
             Airport airport = new Airport(myAirport);
-            Airport airport2 = new Airport(myAirport2);
-
-            foreach (IAircraft item in airport)
-            {
-                Console.WriteLine(item.ConsumptionOfFuel + " " + item.NameOfPlane);
-            }
 
             //foreach (IAircraft item in airport.FindAircraftByConsumptionOfFuel(100, 30000000))
             //{
