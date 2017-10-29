@@ -68,9 +68,12 @@ namespace Task1AirCraft.Classes
             return finding;
         }
 
-        public IEnumerable<IAircraft> FindAircraftByConsumptionOfFuel(double min, double max)
+        public IEnumerable<IAircraft> GetFindAircraftByConsumptionOfFuel(double min, double max)
         {
-            var finding = _airport.Where(i => i.ConsumptionOfFuel <= max && i.ConsumptionOfFuel >= min);
+            var finding = from item in _airport
+                          let i = item.GetConsumptionOfFuel()
+                          where (i >= min && i <= max)
+                          select item;    
             return finding;
         }
 
