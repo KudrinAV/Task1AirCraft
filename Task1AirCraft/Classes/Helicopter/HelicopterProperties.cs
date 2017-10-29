@@ -8,9 +8,9 @@ namespace Task1AirCraft.Classes.Helicopter
 {
     public struct HelicopterProperties
     {
-        int MinimumHeightOfWork;
-        int MaximumHeightOfwork;
-        int NumberOfScrews;
+        public int MinimumHeightOfWork;
+        public int MaximumHeightOfwork;
+        public int NumberOfScrews;
 
         public HelicopterProperties(int maximumHeightOfWork, int minimumHeightOfWork, int nymberOfScrews)
         {
