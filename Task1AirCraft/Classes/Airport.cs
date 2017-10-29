@@ -77,7 +77,7 @@ namespace Task1AirCraft.Classes
             return finding;
         }
 
-        public IEnumerable<IAircraft> SortByFlyingRangeAsc()
+        public IEnumerable<IAircraft> GetSortByFlyingRangeAsc()
         {
             var sorting = _airport.OrderBy(i => i.AircraftProperties_.RangeOfFlight);
             return sorting;
