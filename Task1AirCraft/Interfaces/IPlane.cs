@@ -9,6 +9,6 @@ namespace Task1AirCraft.Interfaces
 {
     public interface IPlane 
     {
-        PlaneProperties PlaneProperties_ { get; }
+        PlanePropertiesModel PlaneProperties { get; }
     }
 }

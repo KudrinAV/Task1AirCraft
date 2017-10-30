@@ -17,12 +17,12 @@ namespace Task1AirCraft
             AircraftProperties aircraftProperties = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
             AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
             AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 3000);
-            PlaneProperties planeProperties = new PlaneProperties(numberOfEngines: 2, numberOfPilots: 2, accelerationLine: 500);
+            PlanePropertiesModel planeProperties = new PlanePropertiesModel(numberOfEngines: 2, numberOfPilots: 2, accelerationLine: 500);
             HelicopterProperties helicopterProperties = new HelicopterProperties(maximumHeightOfWork: 300, minimumHeightOfWork: 50, numberOfScrews: 4);
 
             List<IAircraft> airport = new List<IAircraft>() {
                 new Aircraft("Original", "Original", aircraftProperties),
-                new Plane(typeOfPlane: "boing1", nameOfPlane: "Alice", aircraftProperties_: aircraftProperties, planeProperties_: planeProperties),
+                new Plane(typeOfPlane: "boing1", nameOfPlane: "Alice", aircraftProperties_: aircraftProperties, planeProperties: planeProperties),
                 new PassengerPlane(typeOfPlane: "boing2", nameOfPlane: "Orianna", aircraftProperties_: aircraftProperties1, planeProperties_: planeProperties, numberOfPlaces: 120),
                 new TransportPlane(typeOfPlane: "boing2", nameOfPlane: "TwoBe", aircraftProperties_: aircraftProperties2, planeProperties_: planeProperties, power: 20),
                 new Helicopter(typeOfPlane: "Ansat1", nameOfPlane: "NineS", aircraftProperties_: aircraftProperties1, helicopterProperties_: helicopterProperties),
@@ -35,7 +35,7 @@ namespace Task1AirCraft
         public static void ShowAllAircraft(Airport airport)
         {
             Console.WriteLine("Все экземпляры.");
-            Console.WriteLine("|{0,-10}|{1,-20}|{2,-20}|{3,-20}|{4,20}|", "Название", "Дистанция полета", "Переносимый груз","Вместимость груза","Потребление горючего");
+            Console.WriteLine($"|{"Название",-10}|{"Дистанция полета",-20}|{"Переносимый груз",-20}|{"Вместимость груза",-20}|{"Потребление горючего",20}|");
             foreach (var item in airport)
             {
                 Console.WriteLine("|{0,-10}|{1,-20}|{2,-20}|{3,-20}|{4,-20}|", item.NameOfPlane, item.AircraftProperties_.RangeOfFlight, item.AircraftProperties_.CarryingCapacity, item.AircraftProperties_.Capacity, item.GetConsumptionOfFuel());

@@ -51,7 +51,7 @@
     <Compile Include="Classes\Helicopter\TransportHelicopter.cs" />
     <Compile Include="Classes\Plane\PassengerPlane.cs" />
     <Compile Include="Classes\Plane\Plane.cs" />
-    <Compile Include="Classes\Plane\PlaneProperties.cs" />
+    <Compile Include="Classes\Plane\PlanePropertiesModel.cs" />
     <Compile Include="Classes\Plane\TransportPlane.cs" />
     <Compile Include="Interfaces\IAircraft.cs" />
     <Compile Include="Interfaces\IHelicopter.cs" />
