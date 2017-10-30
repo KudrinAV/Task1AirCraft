@@ -11,14 +11,14 @@ namespace Task1AirCraft.Classes.Plane
     {
         public int NumberOfPlaces { get; private set; }
 
-        public PassengerPlane(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, PlanePropertiesModel planeProperties_, int numberOfPlaces ) : base(typeOfPlane, nameOfPlane, aircraftProperties_, planeProperties_)
+        public PassengerPlane(string typeOfPlane, string nameOfPlane, AircraftPropertiesModel aircraftProperties, PlanePropertiesModel planeProperties, int numberOfPlaces ) : base(typeOfPlane, nameOfPlane, aircraftProperties, planeProperties)
         {
             NumberOfPlaces = numberOfPlaces;
         }
 
         public override double GetConsumptionOfFuel()
         {
-            return PlaneProperties.NumberOfEngines * AircraftProperties_.RangeOfFlight * AircraftProperties_.CarryingCapacity * 0.007 / NumberOfPlaces;
+            return PlaneProperties.NumberOfEngines * AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * 0.007 / NumberOfPlaces;
         }
     }
 }

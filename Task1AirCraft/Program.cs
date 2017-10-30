@@ -14,9 +14,9 @@ namespace Task1AirCraft
     {
         public static ICollection<IAircraft> GetListAircraft()
         {
-            AircraftProperties aircraftProperties = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
-            AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
-            AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 3000);
+            AircraftPropertiesModel aircraftProperties = new AircraftPropertiesModel(capacity: 200, carryingCapacity: 500, rangeOfFlight: 5000);
+            AircraftPropertiesModel aircraftProperties1 = new AircraftPropertiesModel(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
+            AircraftPropertiesModel aircraftProperties2 = new AircraftPropertiesModel(capacity: 200, carryingCapacity: 500, rangeOfFlight: 3000);
             PlanePropertiesModel planeProperties = new PlanePropertiesModel(numberOfEngines: 2, numberOfPilots: 2, accelerationLine: 500);
             HelicopterPropertiesModel helicopterProperties = new HelicopterPropertiesModel(maximumHeightOfWork: 300, minimumHeightOfWork: 50, numberOfScrews: 4);
 
@@ -38,7 +38,7 @@ namespace Task1AirCraft
             Console.WriteLine($"|{"Название",-10}|{"Дистанция полета",-20}|{"Переносимый груз",-20}|{"Вместимость груза",-20}|{"Потребление горючего",20}|");
             foreach (var item in airport)
             {
-                Console.WriteLine("|{0,-10}|{1,-20}|{2,-20}|{3,-20}|{4,-20}|", item.NameOfPlane, item.AircraftProperties_.RangeOfFlight, item.AircraftProperties_.CarryingCapacity, item.AircraftProperties_.Capacity, item.GetConsumptionOfFuel());
+                Console.WriteLine("|{0,-10}|{1,-20}|{2,-20}|{3,-20}|{4,-20}|", item.NameOfPlane, item.AircraftProperties.RangeOfFlight, item.AircraftProperties.CarryingCapacity, item.AircraftProperties.Capacity, item.GetConsumptionOfFuel());
             }
         }
 
@@ -67,13 +67,13 @@ namespace Task1AirCraft
             Console.WriteLine("|{0,-10}|{1,-20}|", "Название", "Длина полета");
             foreach (var item in airport.GetSortByFlyingRangeAsc())
             {
-                Console.WriteLine("|{0,-10}|{1,-20}|", item.NameOfPlane, item.AircraftProperties_.RangeOfFlight);
+                Console.WriteLine("|{0,-10}|{1,-20}|", item.NameOfPlane, item.AircraftProperties.RangeOfFlight);
             }
             Console.WriteLine("\nДемонстрация сортировки по убывания");
             Console.WriteLine("|{0,-10}|{1,-20}|", "Название", "Длина полета");
             foreach (var item in airport.GetSortByFlyingRangeDes())
             {
-                Console.WriteLine("|{0,-10}|{1,-20}|", item.NameOfPlane, item.AircraftProperties_.RangeOfFlight);
+                Console.WriteLine("|{0,-10}|{1,-20}|", item.NameOfPlane, item.AircraftProperties.RangeOfFlight);
             }
         }
 

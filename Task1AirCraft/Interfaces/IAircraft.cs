@@ -9,7 +9,7 @@ namespace Task1AirCraft.Interfaces
 {
     public interface IAircraft : ITypeable
     {
-        AircraftProperties AircraftProperties_ { get;}
+        AircraftPropertiesModel AircraftProperties { get;}
 
         double GetConsumptionOfFuel();
     }

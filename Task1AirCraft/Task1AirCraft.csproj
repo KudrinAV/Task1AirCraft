@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Aircraft.cs" />
-    <Compile Include="Classes\AircraftProperties.cs" />
+    <Compile Include="Classes\AircraftPropertiesModel.cs" />
     <Compile Include="Classes\Airport.cs" />
     <Compile Include="Classes\Helicopter\Helicopter.cs" />
     <Compile Include="Classes\Helicopter\HelicopterPropertiesModel.cs" />

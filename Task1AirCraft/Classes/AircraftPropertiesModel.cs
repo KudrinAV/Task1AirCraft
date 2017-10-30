@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Task1AirCraft.Classes
 {
-    public struct AircraftProperties
+    public struct AircraftPropertiesModel
     {
         public double CarryingCapacity ;
         public double RangeOfFlight;
         public double Capacity;
 
-        public AircraftProperties (double carryingCapacity, double capacity, double rangeOfFlight)
+        public AircraftPropertiesModel (double carryingCapacity, double capacity, double rangeOfFlight)
         {
             CarryingCapacity = carryingCapacity;
             RangeOfFlight = rangeOfFlight;
