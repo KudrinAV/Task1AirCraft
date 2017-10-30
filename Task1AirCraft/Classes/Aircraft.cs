@@ -13,6 +13,8 @@ namespace Task1AirCraft.Classes
 
         public string NameOfPlane { get; private set; }
 
+        protected double _сonsumptionFactor = 0.001;
+
         public AircraftPropertiesModel AircraftProperties { get; private set; }
 
         public Aircraft(string typeOfPlane, string nameOfPlane, AircraftPropertiesModel aircraftProperties)
@@ -24,7 +26,7 @@ namespace Task1AirCraft.Classes
 
         public virtual double GetConsumptionOfFuel()
         {
-            return AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity/1000;
+            return AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * _сonsumptionFactor;
         }
     }
 }

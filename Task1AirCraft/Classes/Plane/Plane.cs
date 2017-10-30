@@ -11,6 +11,8 @@ namespace Task1AirCraft.Classes.Plane
     {
         public PlanePropertiesModel PlaneProperties { get; private set; }
 
+        protected new double _сonsumptionFactor = 0.007;
+
         public Plane(string typeOfPlane, string nameOfPlane, AircraftPropertiesModel aircraftProperties, PlanePropertiesModel planeProperties) : base(typeOfPlane, nameOfPlane, aircraftProperties)
         {
             PlaneProperties = planeProperties;
@@ -18,7 +20,7 @@ namespace Task1AirCraft.Classes.Plane
 
         public override double GetConsumptionOfFuel()
         {
-            return PlaneProperties.NumberOfEngines * AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * 0.007;
+            return PlaneProperties.NumberOfEngines * AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * _сonsumptionFactor;
         }
     }
 }

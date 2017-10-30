@@ -22,12 +22,12 @@ namespace Task1AirCraft
 
             List<IAircraft> airport = new List<IAircraft>() {
                 new Aircraft("Original", "Original", aircraftProperties),
-                new Plane(typeOfPlane: "boing1", nameOfPlane: "Alice", aircraftProperties_: aircraftProperties, planeProperties: planeProperties),
-                new PassengerPlane(typeOfPlane: "boing2", nameOfPlane: "Orianna", aircraftProperties_: aircraftProperties1, planeProperties_: planeProperties, numberOfPlaces: 120),
-                new TransportPlane(typeOfPlane: "boing2", nameOfPlane: "TwoBe", aircraftProperties_: aircraftProperties2, planeProperties_: planeProperties, power: 20),
-                new Helicopter(typeOfPlane: "Ansat1", nameOfPlane: "NineS", aircraftProperties_: aircraftProperties1, helicopterProperties: helicopterProperties),
-                new PassengerHelicopter(typeOfPlane: "Ansat2", nameOfPlane: "ATwo", aircraftProperties_: aircraftProperties, helicopterProperties_: helicopterProperties, numberOfPlaces: 30),
-                new TransportHelicopter(typeOfPlane: "Ansat3", nameOfPlane: "Nier", aircraftProperties_: aircraftProperties2, helicopterProperties_: helicopterProperties, power: 5)
+                new Plane(typeOfPlane: "boing1", nameOfPlane: "Alice", aircraftProperties: aircraftProperties, planeProperties: planeProperties),
+                new PassengerPlane(typeOfPlane: "boing2", nameOfPlane: "Orianna", aircraftProperties: aircraftProperties1, planeProperties: planeProperties, numberOfPlaces: 120),
+                new TransportPlane(typeOfPlane: "boing2", nameOfPlane: "TwoBe", aircraftProperties: aircraftProperties2, planeProperties: planeProperties, power: 20),
+                new Helicopter(typeOfPlane: "Ansat1", nameOfPlane: "NineS", aircraftProperties: aircraftProperties1, helicopterProperties: helicopterProperties),
+                new PassengerHelicopter(typeOfPlane: "Ansat2", nameOfPlane: "ATwo", aircraftProperties: aircraftProperties, helicopterProperties: helicopterProperties, numberOfPlaces: 30),
+                new TransportHelicopter(typeOfPlane: "Ansat3", nameOfPlane: "Nier", aircraftProperties: aircraftProperties2, helicopterProperties: helicopterProperties, power: 5)
             };
             return airport;
         }

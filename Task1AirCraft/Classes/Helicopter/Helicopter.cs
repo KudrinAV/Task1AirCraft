@@ -11,6 +11,8 @@ namespace Task1AirCraft.Classes.Helicopter
     {
         public HelicopterPropertiesModel HelicopterProperties { get; private set; }
 
+        protected new double _сonsumptionFactor = 0.0003;
+
         public Helicopter(string typeOfPlane, string nameOfPlane, AircraftPropertiesModel aircraftProperties, HelicopterPropertiesModel helicopterProperties) : base(typeOfPlane, nameOfPlane, aircraftProperties)
         {
             HelicopterProperties = helicopterProperties;
@@ -18,7 +20,7 @@ namespace Task1AirCraft.Classes.Helicopter
 
         public override double GetConsumptionOfFuel()
         {
-            return HelicopterProperties.NumberOfScrews* AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * 0.0003;
+            return HelicopterProperties.NumberOfScrews* AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * _сonsumptionFactor;
         }
     }
 }

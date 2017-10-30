@@ -18,7 +18,7 @@ namespace Task1AirCraft.Classes.Helicopter
 
         public override double GetConsumptionOfFuel()
         {
-            return HelicopterProperties.NumberOfScrews * AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * 0.0003 / NumberOfPlaces;
+            return HelicopterProperties.NumberOfScrews * AircraftProperties.RangeOfFlight * AircraftProperties.CarryingCapacity * _сonsumptionFactor / NumberOfPlaces;
         }
     }
 }
