@@ -9,6 +9,6 @@ namespace Task1AirCraft.Interfaces
 {
     public interface IHelicopter
     {
-        HelicopterProperties HelicopterProperties_ { get; }
+        HelicopterPropertiesModel HelicopterProperties { get; }
     }
 }

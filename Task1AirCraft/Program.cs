@@ -18,14 +18,14 @@ namespace Task1AirCraft
             AircraftProperties aircraftProperties1 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 4000);
             AircraftProperties aircraftProperties2 = new AircraftProperties(capacity: 200, carryingCapacity: 500, rangeOfFlight: 3000);
             PlanePropertiesModel planeProperties = new PlanePropertiesModel(numberOfEngines: 2, numberOfPilots: 2, accelerationLine: 500);
-            HelicopterProperties helicopterProperties = new HelicopterProperties(maximumHeightOfWork: 300, minimumHeightOfWork: 50, numberOfScrews: 4);
+            HelicopterPropertiesModel helicopterProperties = new HelicopterPropertiesModel(maximumHeightOfWork: 300, minimumHeightOfWork: 50, numberOfScrews: 4);
 
             List<IAircraft> airport = new List<IAircraft>() {
                 new Aircraft("Original", "Original", aircraftProperties),
                 new Plane(typeOfPlane: "boing1", nameOfPlane: "Alice", aircraftProperties_: aircraftProperties, planeProperties: planeProperties),
                 new PassengerPlane(typeOfPlane: "boing2", nameOfPlane: "Orianna", aircraftProperties_: aircraftProperties1, planeProperties_: planeProperties, numberOfPlaces: 120),
                 new TransportPlane(typeOfPlane: "boing2", nameOfPlane: "TwoBe", aircraftProperties_: aircraftProperties2, planeProperties_: planeProperties, power: 20),
-                new Helicopter(typeOfPlane: "Ansat1", nameOfPlane: "NineS", aircraftProperties_: aircraftProperties1, helicopterProperties_: helicopterProperties),
+                new Helicopter(typeOfPlane: "Ansat1", nameOfPlane: "NineS", aircraftProperties_: aircraftProperties1, helicopterProperties: helicopterProperties),
                 new PassengerHelicopter(typeOfPlane: "Ansat2", nameOfPlane: "ATwo", aircraftProperties_: aircraftProperties, helicopterProperties_: helicopterProperties, numberOfPlaces: 30),
                 new TransportHelicopter(typeOfPlane: "Ansat3", nameOfPlane: "Nier", aircraftProperties_: aircraftProperties2, helicopterProperties_: helicopterProperties, power: 5)
             };

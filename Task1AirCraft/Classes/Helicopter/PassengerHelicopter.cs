@@ -11,14 +11,14 @@ namespace Task1AirCraft.Classes.Helicopter
     {
         public int NumberOfPlaces { get; private set; }
 
-        public PassengerHelicopter(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, HelicopterProperties helicopterProperties_, int numberOfPlaces) : base(typeOfPlane, nameOfPlane, aircraftProperties_, helicopterProperties_)
+        public PassengerHelicopter(string typeOfPlane, string nameOfPlane, AircraftProperties aircraftProperties_, HelicopterPropertiesModel helicopterProperties_, int numberOfPlaces) : base(typeOfPlane, nameOfPlane, aircraftProperties_, helicopterProperties_)
         {
             NumberOfPlaces = numberOfPlaces;
         }
 
         public override double GetConsumptionOfFuel()
         {
-            return HelicopterProperties_.NumberOfScrews * AircraftProperties_.RangeOfFlight * AircraftProperties_.CarryingCapacity * 0.0003 / NumberOfPlaces;
+            return HelicopterProperties.NumberOfScrews * AircraftProperties_.RangeOfFlight * AircraftProperties_.CarryingCapacity * 0.0003 / NumberOfPlaces;
         }
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Task1AirCraft.Classes.Helicopter
 {
-    public struct HelicopterProperties
+    public struct HelicopterPropertiesModel
     {
         public int MinimumHeightOfWork;
         public int MaximumHeightOfwork;
         public int NumberOfScrews;
 
-        public HelicopterProperties(int maximumHeightOfWork, int minimumHeightOfWork, int numberOfScrews)
+        public HelicopterPropertiesModel(int maximumHeightOfWork, int minimumHeightOfWork, int numberOfScrews)
         {
             MinimumHeightOfWork = minimumHeightOfWork;
             MaximumHeightOfwork = maximumHeightOfWork;
